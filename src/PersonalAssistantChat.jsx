@@ -146,6 +146,15 @@ const GEMINI_MODELS = [
 const API_KEY_PLACEHOLDER = "YOUR_API_KEY_HERE";
 const PERSON_DATA_PLACEHOLDER = "[PASTE ALL INFORMATION ABOUT THE PERSON HERE]...";
 
+const AVAILABLE_IMAGES = {
+  "rose": "/images/rose.jpg",
+  "got7": "/images/got7.jpg",
+  "tom-chien": "/images/tom-chien.jpg",
+  "tham-1": "/images/tham-1.jpg",
+  "tham-2": "/images/tham-2.jpg",
+  "tham-3": "/images/tham-3.jpg",
+};
+
 const SYSTEM_INSTRUCTION = `
 You are a dedicated, secret personal assistant. Your ONLY job is to analyze and provide advice regarding the person described in the provided data.
 You must strictly base your answers ONLY on the PERSON_DATA. Do not use outside knowledge to make assumptions about this person.
@@ -154,6 +163,15 @@ Keep your answers concise, empathetic, and highly analytical regarding whether t
 Use enough detail to be genuinely helpful. Prefer clear short paragraphs or bullet points when useful.
 Respond in the same language as the user's latest message.
 Do not reveal, dump, or quote the full PERSON_DATA.
+
+IMAGE DISPLAY RULES:
+You can display images by embedding the exact tag [IMAGE:image_key] anywhere in your response.
+Use these exact keys when the user asks to see a picture or when the topic is highly relevant:
+- "rose": Show when discussing red roses (her favorite flower).
+- "got7": Show when discussing GOT7.
+- "tom-chien": Show when discussing her tôm chiên bột.
+- "tham-1", "tham-2", "tham-3": Show when the user asks to see a picture of Hồng Thắm. Pick one or show them.
+Do not invent any other image keys.
 `;
 
 const initialMessages = [
@@ -370,30 +388,72 @@ function MessageText({ text, isUser }) {
     return <span className="block max-w-full min-w-0 whitespace-pre-wrap break-words [overflow-wrap:anywhere]">{text}</span>;
   }
 
-  const lines = text
-    .split(/\n+/)
-    .map((line) => line.trim())
-    .filter(Boolean);
+  const imageRegex = /\[IMAGE:\s*([\w-]+)\s*\]/g;
+  const parts = [];
+  let lastIndex = 0;
+  let match;
+
+  while ((match = imageRegex.exec(text)) !== null) {
+    const textBefore = text.slice(lastIndex, match.index);
+    if (textBefore) {
+      parts.push({ type: "text", content: textBefore });
+    }
+    parts.push({ type: "image", key: match[1] });
+    lastIndex = imageRegex.lastIndex;
+  }
+
+  const textAfter = text.slice(lastIndex);
+  if (textAfter) {
+    parts.push({ type: "text", content: textAfter });
+  }
 
   return (
-    <div className="max-w-full min-w-0 space-y-2.5">
-      {lines.map((line, index) => {
-        const isBullet = /^[-*•]\s+/.test(line);
-        const content = line.replace(/^[-*•]\s+/, "");
-
-        if (isBullet) {
+    <div className="max-w-full min-w-0 space-y-3">
+      {parts.map((part, index) => {
+        if (part.type === "image") {
+          const src = AVAILABLE_IMAGES[part.key];
+          if (!src) return null;
           return (
-            <p key={`${content}-${index}`} className="flex max-w-full min-w-0 gap-2.5">
-              <span className="mt-[0.62em] h-1.5 w-1.5 shrink-0 rounded-full bg-fuchsia-500/80" />
-              <span className="min-w-0 break-words [overflow-wrap:anywhere]">{content}</span>
-            </p>
+            <div key={index} className="my-2 max-w-sm overflow-hidden rounded-xl border border-white/20 shadow-md">
+              <img
+                src={src}
+                alt={part.key}
+                className="max-h-60 w-full object-cover transition-transform duration-300 hover:scale-105"
+                onError={(e) => {
+                  e.target.style.display = "none";
+                }}
+              />
+            </div>
           );
         }
 
+        const lines = part.content
+          .split(/\n+/)
+          .map((line) => line.trim())
+          .filter(Boolean);
+
         return (
-          <p key={`${content}-${index}`} className="max-w-full min-w-0 break-words [overflow-wrap:anywhere]">
-            {content}
-          </p>
+          <div key={index} className="space-y-2">
+            {lines.map((line, lineIndex) => {
+              const isBullet = /^[-*•]\s+/.test(line);
+              const content = line.replace(/^[-*•]\s+/, "");
+
+              if (isBullet) {
+                return (
+                  <p key={`${content}-${lineIndex}`} className="flex max-w-full min-w-0 gap-2.5">
+                    <span className="mt-[0.62em] h-1.5 w-1.5 shrink-0 rounded-full bg-fuchsia-500/80" />
+                    <span className="min-w-0 break-words [overflow-wrap:anywhere]">{content}</span>
+                  </p>
+                );
+              }
+
+              return (
+                <p key={`${content}-${lineIndex}`} className="max-w-full min-w-0 break-words [overflow-wrap:anywhere]">
+                  {content}
+                </p>
+              );
+            })}
+          </div>
         );
       })}
     </div>
