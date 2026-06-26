@@ -5,7 +5,6 @@ import { AnimatePresence, motion } from "framer-motion";
 import {
   AlertCircle,
   Bot,
-  KeyRound,
   Send,
   Sparkles,
   UserRound,
@@ -142,6 +141,7 @@ const GEMINI_MODELS = [
   "gemini-2.5-flash-lite",
   "gemini-2.5-flash",
   "gemini-2.0-flash",
+  "gemini-1.5-flash",
 ];
 const API_KEY_PLACEHOLDER = "YOUR_API_KEY_HERE";
 const PERSON_DATA_PLACEHOLDER = "[PASTE ALL INFORMATION ABOUT THE PERSON HERE]...";
