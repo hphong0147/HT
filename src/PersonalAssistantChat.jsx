@@ -8,6 +8,7 @@ import {
   Send,
   Sparkles,
   UserRound,
+  X,
 } from "lucide-react";
 
 export const PERSON_DATA = `
@@ -389,7 +390,7 @@ function TypingIndicator() {
   );
 }
 
-function MessageText({ text, isUser }) {
+function MessageText({ text, isUser, onImageClick }) {
   if (isUser) {
     return <span className="block max-w-full min-w-0 whitespace-pre-wrap break-words [overflow-wrap:anywhere]">{text}</span>;
   }
@@ -420,7 +421,11 @@ function MessageText({ text, isUser }) {
           const src = AVAILABLE_IMAGES[part.key];
           if (!src) return null;
           return (
-            <div key={index} className="my-2 max-w-sm overflow-hidden rounded-xl border border-white/20 shadow-md">
+            <div
+              key={index}
+              onClick={() => onImageClick && onImageClick(src)}
+              className="my-2 max-w-sm overflow-hidden rounded-xl border border-white/20 shadow-md cursor-zoom-in"
+            >
               <img
                 src={src}
                 alt={part.key}
@@ -466,7 +471,7 @@ function MessageText({ text, isUser }) {
   );
 }
 
-function MessageBubble({ message }) {
+function MessageBubble({ message, onImageClick }) {
   const isUser = message.role === "user";
   const aiClass = message.isError
     ? "w-fit max-w-full min-w-0 overflow-x-hidden rounded-[22px] rounded-bl-md border border-rose-200/80 bg-rose-50/90 px-4 py-3 text-[14px] leading-6 text-rose-950 shadow-[0_18px_48px_rgba(88,28,135,0.16)] backdrop-blur-2xl sm:px-5 sm:text-[15px]"
@@ -501,7 +506,7 @@ function MessageBubble({ message }) {
               : aiClass
           }
         >
-          <MessageText text={message.text} isUser={isUser} />
+          <MessageText text={message.text} isUser={isUser} onImageClick={onImageClick} />
         </div>
         <span
           className={`px-2 text-[11px] font-medium ${
@@ -527,6 +532,7 @@ export default function PersonalAssistantChat() {
   const [apiKey, setApiKey] = useState(API_KEY);
   const [activeModel, setActiveModel] = useState(GEMINI_MODELS[0]);
   const [isTyping, setIsTyping] = useState(false);
+  const [selectedImage, setSelectedImage] = useState(null);
   const listRef = useRef(null);
 
   const dataStatus = hasConfiguredPersonData() ? "ready" : "missing";
@@ -709,7 +715,7 @@ export default function PersonalAssistantChat() {
           <div className="flex min-w-0 flex-col gap-4 pb-5 sm:gap-5 sm:pb-6">
             <AnimatePresence initial={false}>
               {messages.map((message) => (
-                <MessageBubble key={message.id} message={message} />
+                <MessageBubble key={message.id} message={message} onImageClick={setSelectedImage} />
               ))}
 
               {isTyping && (
@@ -764,6 +770,37 @@ export default function PersonalAssistantChat() {
           </form>
         </div>
       </motion.section>
+
+      <AnimatePresence>
+        {selectedImage && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setSelectedImage(null)}
+            className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-black/90 p-4 backdrop-blur-md cursor-zoom-out"
+          >
+            <motion.button
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              className="absolute right-4 top-4 rounded-full bg-white/10 p-2 text-white/80 hover:bg-white/20 hover:text-white transition"
+              onClick={() => setSelectedImage(null)}
+            >
+              <X size={24} />
+            </motion.button>
+            <motion.img
+              initial={{ scale: 0.9, y: 20 }}
+              animate={{ scale: 1, y: 0 }}
+              exit={{ scale: 0.9, y: 20 }}
+              transition={{ type: "spring", stiffness: 300, damping: 25 }}
+              src={selectedImage}
+              alt="Enlarged view"
+              className="max-h-[90vh] max-w-full rounded-2xl object-contain shadow-2xl"
+            />
+          </motion.div>
+        )}
+      </AnimatePresence>
     </main>
   );
 }
