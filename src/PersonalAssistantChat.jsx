@@ -493,9 +493,8 @@ function MessageBubble({ message, onImageClick }) {
       initial="hidden"
       animate="visible"
       exit="exit"
-      className={`flex w-full max-w-full min-w-0 items-end gap-2 overflow-x-hidden sm:gap-3 ${
-        isUser ? "justify-end" : "justify-start"
-      }`}
+      className={`flex w-full max-w-full min-w-0 items-end gap-2 overflow-x-hidden sm:gap-3 ${isUser ? "justify-end" : "justify-start"
+        }`}
     >
       {!isUser && (
         <div className="mb-1 grid h-8 w-8 shrink-0 place-items-center rounded-full border border-white/[0.55] bg-white/60 text-fuchsia-700 shadow-lg shadow-fuchsia-900/10 backdrop-blur-xl sm:h-9 sm:w-9">
@@ -504,9 +503,8 @@ function MessageBubble({ message, onImageClick }) {
       )}
 
       <div
-        className={`flex min-w-0 max-w-[calc(100%-2.5rem)] flex-col gap-1.5 overflow-x-hidden sm:max-w-[74%] lg:max-w-[66%] ${
-          isUser ? "items-end" : "items-start"
-        }`}
+        className={`flex min-w-0 max-w-[calc(100%-2.5rem)] flex-col gap-1.5 overflow-x-hidden sm:max-w-[74%] lg:max-w-[66%] ${isUser ? "items-end" : "items-start"
+          }`}
       >
         <div
           className={
@@ -518,9 +516,8 @@ function MessageBubble({ message, onImageClick }) {
           <MessageText text={message.text} isUser={isUser} onImageClick={onImageClick} />
         </div>
         <span
-          className={`px-2 text-[11px] font-medium ${
-            isUser ? "text-white/[0.72]" : "text-purple-950/[0.45]"
-          }`}
+          className={`px-2 text-[11px] font-medium ${isUser ? "text-white/[0.72]" : "text-purple-950/[0.45]"
+            }`}
         >
           {message.time}
         </span>
@@ -718,7 +715,7 @@ export default function PersonalAssistantChat() {
           </div>
         </header>
 
-        
+
 
         <div ref={listRef} className="min-h-0 flex-1 overflow-y-auto overflow-x-hidden overscroll-contain px-3 py-4 scroll-pb-6 sm:px-6 sm:py-7">
           <div className="flex min-w-0 flex-col gap-4 pb-5 sm:gap-5 sm:pb-6">
