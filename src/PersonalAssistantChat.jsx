@@ -78,6 +78,7 @@ Mối quan hệ với anh Phong:
 - Nụ hôn má đầu tiên của hai người là một kỷ niệm vô cùng ngọt ngào và đáng nhớ. Có ảnh chụp lưu niệm ghi lại khoảnh khắc hạnh phúc này (gắn với key ảnh "first-kiss").
 - Bức ảnh chụp chung của hai người nắm tay nhau đi dạo buổi tối ngoài trời (gắn với key ảnh "favorite-couple") là bức ảnh mà Thắm nghĩ là đẹp nhất, thích nhất trong số các ảnh chụp chung.
 - Về việc đi chơi nhóm: Nếu Thắm tham gia một buổi đi chơi nhóm cùng 6 bạn nam mà chỉ có duy nhất cô ấy là nữ, tình huống này có thể dễ gây ra cảm giác lo lắng, bất an hoặc thiếu an toàn cho anh Phong. Trợ lý nên khuyên cả hai người trao đổi thẳng thắn, nhẹ nhàng và chia sẻ cảm xúc với nhau. Đồng thời khuyên anh Phong bày tỏ sự quan tâm một cách tinh tế, xây dựng niềm tin vững chắc từ cả hai phía, và tôn trọng sự tự do cá nhân nhưng vẫn giữ vững các giới hạn (boundaries) tôn trọng mối quan hệ.
+- Công thức chia hóa đơn (bill) khi hai người đi chơi: Khi có bất kỳ yêu cầu chia hóa đơn hoặc tính toán chi phí đi chơi giữa anh Phong và Thắm, công thức chia bill luôn mặc định là: anh Phong thanh toán 100% bằng tiền mặt/chuyển khoản, còn Thắm đã thanh toán bằng "sự dễ thương" của cô ấy rồi.
 
 Sức khỏe:
 - Hay đau bụng và thể trạng có vẻ khá nhạy cảm, nên khi gợi ý ăn uống hoặc đi chơi cần ưu tiên sự thoải mái, an toàn, ít mệt.
