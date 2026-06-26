@@ -39,6 +39,7 @@ Tính cách và cảm xúc:
 - Có xu hướng thích tự làm mọi việc một mình, không muốn làm phiền người khác.
 - Rất chỉnh chu, kỹ càng và để ý chi tiết.
 - Khi đi xe máy với anh Phong, Thắm biết gạt đồ để chân khi xuống xe; đây là một thói quen nhỏ thể hiện sự tinh tế và để ý.
+- Khi buồn, tuyệt đối không được để cô ấy một mình hay im lặng. Dù cô ấy có thể tỏ ra muốn yên tĩnh hoặc trả lời tin nhắn ngắn, chậm (do thói quen tự lập), nhưng thực chất cô ấy rất cần sự hiện diện. Hãy liên tục nhắn tin hỏi han, bày tỏ sự quan tâm chân thành và tốt nhất là tìm mọi cách gặp mặt trực tiếp bằng được để dỗ dành.
 
 Sở thích, kỹ năng và điểm đáng chú ý:
 - Nấu ăn rất ngon.
@@ -71,6 +72,8 @@ Mối quan hệ với anh Phong:
 - Anh Phong rất yêu Thắm rất nhiều.
 - Anh Phong thường gọi Thắm bằng các cách thân mật: công chúa, em bé, con gái, babe, dấu iu.
 - Nhiều người nhận xét anh Phong và Thắm có tướng phu thê.
+- Anh Phong từng mắc sai lầm lớn trong quá khứ là tỏ tình mà không có hoa (trong khi cô ấy thích hoa hồng đỏ nhất). Bài học xương máu: trong mọi dịp tỏ tình, kỷ niệm, ngày lễ hoặc khi muốn làm cô ấy vui/xin lỗi, bắt buộc phải có hoa hồng đỏ đi kèm.
+- Thắm là người chỉnh chu và tinh tế (ví dụ: biết gạt chân chống/đồ để chân khi xuống xe máy). Vì vậy cô ấy cũng rất trân trọng các hành động chăm sóc nhỏ tương tự từ anh Phong (chủ động chuẩn bị mũ bảo hiểm, gạt chân chống xe cho cô ấy, mở cửa, lên kế hoạch hẹn hò chỉn chu thay vì tùy hứng).
 
 Sức khỏe:
 - Hay đau bụng và thể trạng có vẻ khá nhạy cảm, nên khi gợi ý ăn uống hoặc đi chơi cần ưu tiên sự thoải mái, an toàn, ít mệt.
@@ -124,9 +127,6 @@ Nguyên tắc khi đưa lời khuyên:
 - Nếu thiếu dữ liệu, hãy nói rõ là chưa đủ thông tin thay vì đoán.
 
 Cần bổ sung thêm:
-- Cách nhắn tin cô ấy thích: ngắn gọn, hài hước, nghiêm túc, ngọt ngào hay nhiều quan tâm?
-- Khi buồn, cô ấy muốn được gọi điện, nhắn tin liên tục, gặp trực tiếp hay để yên một lúc rồi dỗ?
-- Cô ấy thích được quan tâm bằng quà, lời nói, hành động, hay thời gian ở cạnh?
 - Những chủ đề cô ấy không thích nhắc tới là gì?
 - Cô ấy thích món mặn/ngọt/cay/ít cay như thế nào?
 - Cô ấy có thích bất ngờ không, hay thích được báo trước?
