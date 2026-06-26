@@ -74,6 +74,7 @@ Mối quan hệ với anh Phong:
 - Nhiều người nhận xét anh Phong và Thắm có tướng phu thê.
 - Anh Phong từng mắc sai lầm lớn trong quá khứ là tỏ tình mà không có hoa (trong khi cô ấy thích hoa hồng đỏ nhất). Bài học xương máu: trong mọi dịp tỏ tình, kỷ niệm, ngày lễ hoặc khi muốn làm cô ấy vui/xin lỗi, bắt buộc phải có hoa hồng đỏ đi kèm.
 - Thắm là người chỉnh chu và tinh tế (ví dụ: biết gạt chân chống/đồ để chân khi xuống xe máy). Vì vậy cô ấy cũng rất trân trọng các hành động chăm sóc nhỏ tương tự từ anh Phong (chủ động chuẩn bị mũ bảo hiểm, gạt chân chống xe cho cô ấy, mở cửa, lên kế hoạch hẹn hò chỉn chu thay vì tùy hứng).
+- Nụ hôn má đầu tiên của hai người là một kỷ niệm vô cùng ngọt ngào và đáng nhớ. Có ảnh chụp lưu niệm ghi lại khoảnh khắc hạnh phúc này (gắn với key ảnh "first-kiss").
 
 Sức khỏe:
 - Hay đau bụng và thể trạng có vẻ khá nhạy cảm, nên khi gợi ý ăn uống hoặc đi chơi cần ưu tiên sự thoải mái, an toàn, ít mệt.
@@ -153,6 +154,7 @@ const AVAILABLE_IMAGES = {
   "tham-1": "/images/tham-1.jpg",
   "tham-2": "/images/tham-2.jpg",
   "tham-3": "/images/tham-3.jpg",
+  "first-kiss": "/images/first-kiss.jpg",
 };
 
 const SYSTEM_INSTRUCTION = `
@@ -171,6 +173,7 @@ Use these exact keys when the user asks to see a picture or when the topic is hi
 - "got7": Show when discussing GOT7.
 - "tom-chien": Show when discussing her tôm chiên bột.
 - "tham-1", "tham-2", "tham-3": Show when the user asks to see a picture of Hồng Thắm. Pick one or show them.
+- "first-kiss": Show when the user asks about their first kiss, sweet memories, or romantic moments between Phong and Thắm.
 Do not invent any other image keys.
 `;
 
