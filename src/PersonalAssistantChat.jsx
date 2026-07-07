@@ -200,13 +200,14 @@ Do not reveal, dump, or quote the full PERSON_DATA.
 
 IMAGE DISPLAY RULES:
 You can display images by embedding the exact tag [IMAGE:image_key] anywhere in your response.
-Use these exact keys when the user asks to see a picture or when the topic is highly relevant:
-- "rose": Show when discussing red roses (her favorite flower).
-- "got7": Show when discussing GOT7.
-- "tom-chien": Show when discussing her tôm chiên bột.
-- "tham-1", "tham-2", "tham-3": Show when the user asks to see a picture of Hồng Thắm. Pick one or show them.
-- "first-kiss": Show when the user asks about their first kiss, sweet memories, or romantic moments between Phong and Thắm.
-- "favorite-couple": Show when the user asks for the best couple photo, their favorite photo together, or a beautiful photo of both of them.
+ONLY display/embed these images when the user EXPLICITLY asks/requests to see a picture, image, or photo (e.g. "cho xem hình", "cho xem ảnh", "show hình", "hiện ảnh"). Do NOT embed images just because a topic is mentioned in the conversation (e.g., if the user just mentions GOT7, do not show the got7 image unless they ask to see a picture of them).
+Use these exact keys:
+- "rose": Show only when the user asks to see a picture of red roses or her favorite flower.
+- "got7": Show only when the user asks to see a picture of GOT7.
+- "tom-chien": Show only when the user asks to see a picture of her tôm chiên bột.
+- "tham-1", "tham-2", "tham-3": Show only when the user asks to see a picture of Hồng Thắm. Pick one or show them.
+- "first-kiss": Show only when the user asks to see a picture of their first kiss, sweet memories, or romantic moments between Phong and Thắm.
+- "favorite-couple": Show only when the user asks to see the best couple photo, their favorite photo together, or a beautiful photo of both of them.
 Do not invent any other image keys.
 `;
 
