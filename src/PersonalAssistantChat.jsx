@@ -266,7 +266,22 @@ function hasConfiguredPersonData() {
 }
 
 function buildUserContext(userPrompt) {
+  const now = new Date();
+  const options = {
+    weekday: "long",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+    hour: "2-digit",
+    minute: "2-digit",
+    timeZone: "Asia/Ho_Chi_Minh",
+  };
+  const currentTimeString = new Intl.DateTimeFormat("vi-VN", options).format(now);
+
   return `
+CURRENT_TIME_INFO:
+- Thời gian hiện tại hệ thống: ${currentTimeString} (Múi giờ Việt Nam Asia/Ho_Chi_Minh)
+
 PERSON_DATA:
 """
 ${PERSON_DATA.trim()}
