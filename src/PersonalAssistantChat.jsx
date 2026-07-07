@@ -70,7 +70,7 @@ Ngoại hình:
 - Phong thấy Thắm rất xinh đẹp, dễ thương và có nét công chúa/em bé.
 
 Mối quan hệ với anh Phong:
-- Ngày bắt đầu hẹn hò chính thức: 24/09/2035.
+- Ngày bắt đầu hẹn hò chính thức: 24/09/2025.
 - Khởi nguồn câu chuyện tình yêu: Chuyện tình của hai người bắt đầu từ một ly nước rau má (đây là chi tiết rất đặc biệt vì bình thường Thắm không thích rau má).
 - Anh Phong rất yêu Thắm rất nhiều.
 - Anh Phong thường gọi Thắm bằng các cách thân mật: công chúa, em bé, con gái, babe, dấu iu.
